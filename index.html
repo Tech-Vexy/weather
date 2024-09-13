@@ -3,28 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AccuWeather Clone</title>
+  <title>AeroWeather</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+<div class="logo-container">
+  <img src="favicon.ico" alt="Weather Icon">
+  <div class="logo-text">Aero<span>Weather</span></div>
+</div>
+</div>
 <div class="container">
-  <div class="weather-section">
-    <h1>AccuWeather Clone</h1>
+  <div class="featured-search-bar featured-search">
+    <div class="searchbar-content">
+      <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path transform="translate(3 3)" d="M7.186 13.554c-3.462 0-6.303-2.869-6.303-6.359C.883 3.681 3.724.837 7.186.837c3.437 0 6.278 2.844 6.278 6.358 0 3.49-2.865 6.359-6.278 6.359zm5.323-1.602a7.176 7.176 0 0 0 1.815-4.757c0-3.968-3.2-7.195-7.138-7.195C3.223 0 0 3.227 0 7.195c0 3.944 3.223 7.171 7.186 7.171a7.058 7.058 0 0 0 4.75-1.84L17.427 18l.573-.55-5.49-5.498z"/></svg>
+      <form class="search-form"  method="GET">
+        <input
+                id="area"
+                class="search-input"
+                type="text"
+                placeholder="Search your Address, City or Town"
+                data-placeholder="Search your Address, City or Zip Code"
+                data-alternative-placeholder="Search"
+                autocomplete="on"
+        />
+      </form>
+      <select id="units">
+        <option value="metric">Metric</option>
+        <option value="imperial">Imperial</option>
+      </select>
+      <div id="get-weather">
+        <p id="location"></p>
+        <button id="search" onclick="getWeather()">Search</button>
+      </div>
+      <div>
+      </div>
+    </div>
+  </div>
+  <div class="search-results">
+  <div class="search-bar-result current-location-result" data-target="" data-error-target="">
+    <img width="20" height="20" src="https://img.icons8.com/color/48/marker--v1.png" alt="marker--v1"/>
+    <span onclick="loadWeather()" class="current-location-text" style="max-width: 200px;">Use your current location</span>
+  </div>
+  <div class="" data-url="" ></div>
+    <h2 style="color: white;" id="current-location"></h2>
     <div id="weather-info"></div>
-  </div>
-  <div class="news-section">
-    <input type="text" id="location" placeholder="Enter City">
-    <select id="country">
-      <option value="us">United States</option>
-      <option value="uk">United Kingdom</option>
-      <option value="ca">Canada</option>
-      <!-- Add more countries as needed -->
-    </select>
-    <button onclick="getWeather()">Get Weather</button>
-    <div id="news"></div>
-  </div>
+</div>
+</div>
+<div class="weather-section" id="recent-locations-list">
+  <h2 style="color: white;font-family: Solis,Segoe UI, serif;">Recent Locations</h2>
+  <div id="recent-locations" style="font-weight: bold; color: white; position: relative">Recently Searched  Locations</div>
 </div>
 
+
+
 <script src="./js/app.js"></script>
+<script>
+  document.body.style.backgroundImage = `url('background.jpg')`;
+  window.onload = showRecentlySearched();
+</script>
 </body>
 </html>
