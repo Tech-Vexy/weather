@@ -95,7 +95,7 @@ export function displayWeatherForecast(data) {
 
 export function displayNews(news) {
     const newsDiv = document.getElementById('news-list');
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 12; i++) {
         const title = news[i].title;
         const image = news[i].imageUrl;
         const link = news[i].link;
@@ -103,9 +103,9 @@ export function displayNews(news) {
         newsDiv.innerHTML += `
 <div class="news-item">
 <figure>
- <img src="${image}" alt="${title}" target="_blank">
+ <img src="${image}" alt="${title}" >
  <figcaption>
-  <a href="${link}">${title}</a>
+  <a href="${link}" target="_blank">${title}</a>
 </figcaption>
 </figure>
 </div>
