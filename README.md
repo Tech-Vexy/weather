@@ -9,4 +9,4 @@ Recently searched locations are stored in browser localStorage and are displayed
 searches.
 
 ## Preview of the Application
-![The app showing weather information](img.png)
+![The app showing weather information](img_1.png))
