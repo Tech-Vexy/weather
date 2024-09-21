@@ -389,3 +389,20 @@ figure {
   width: 90%;
   margin: 0 auto;
 }
+
+/* For tablets */
+@media screen and (max-width: 768px) {
+  body {
+    width: fit-content;
+  }
+
+
+}
+
+/* For mobile */
+@media screen and (max-width: 480px) {
+  body {
+    width: fit-content;
+  }
+
+}
