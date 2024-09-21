@@ -393,6 +393,9 @@ figure {
   body {
     width: fit-content;
   }
+  .weather-section {
+    display: block;
+  }
 
 
 }

@@ -95,7 +95,7 @@ export function displayWeatherForecast(data) {
 
 export function displayNews(news) {
     const newsDiv = document.getElementById('news-list');
-    for (let i = 0; i < 12; i++) {
+    for (let i = 0; i < 32; i++) {
         const title = news[i].title;
         const image = news[i].imageUrl;
         const link = news[i].link;
