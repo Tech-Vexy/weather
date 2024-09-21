@@ -340,14 +340,13 @@ input[type="text"] {
 }
 #news-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 10px; /* Adds space between items */
   justify-content: space-around; /* Space between items */
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
-  max-height: 800px; /* Limit the height of the container */
   overflow-y: auto; /* Enable scrolling vertically when content exceeds the height */
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
 
 }
 .news-item {
